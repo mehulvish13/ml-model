@@ -40,14 +40,20 @@ function writeEntries(entries) {
 
 function sendJson(response, statusCode, data) {
     response.writeHead(statusCode, {
-        "Content-Type": "application/json; charset=utf-8"
+        "Content-Type": "application/json; charset=utf-8",
+        "Cache-Control": "no-store, no-cache, must-revalidate, max-age=0",
+        "Pragma": "no-cache",
+        "Expires": "0"
     });
     response.end(JSON.stringify(data));
 }
 
 function sendText(response, statusCode, text, contentType = "text/plain; charset=utf-8") {
     response.writeHead(statusCode, {
-        "Content-Type": contentType
+        "Content-Type": contentType,
+        "Cache-Control": "no-store, no-cache, must-revalidate, max-age=0",
+        "Pragma": "no-cache",
+        "Expires": "0"
     });
     response.end(text);
 }
@@ -64,7 +70,10 @@ function serveStaticFile(response, filePath) {
     try {
         const content = fs.readFileSync(filePath);
         response.writeHead(200, {
-            "Content-Type": contentTypeMap[ext] || "application/octet-stream"
+            "Content-Type": contentTypeMap[ext] || "application/octet-stream",
+            "Cache-Control": "no-store, no-cache, must-revalidate, max-age=0",
+            "Pragma": "no-cache",
+            "Expires": "0"
         });
         response.end(content);
     } catch (error) {

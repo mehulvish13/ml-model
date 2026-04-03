@@ -62,7 +62,7 @@ function setEntries(entries) {
 
 async function loadStoredEntries() {
     try {
-        const response = await fetch(API_URL);
+        const response = await fetch(API_URL, { cache: "no-store" });
 
         if (!response.ok) {
             throw new Error("Failed to load entries");
@@ -105,6 +105,7 @@ async function saveEntry() {
             headers: {
                 "Content-Type": "application/json"
             },
+            cache: "no-store",
             body: JSON.stringify({
                 profile: state.selectedProfile,
                 entry
