@@ -1,0 +1,158 @@
+:root {
+    --bg: #f4f7fb;
+    --card: #ffffff;
+    --text: #1f2937;
+    --muted: #6b7280;
+    --primary: #0f766e;
+    --primary-strong: #115e59;
+    --border: #d1d5db;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(180deg, #eef2ff 0%, var(--bg) 100%);
+    color: var(--text);
+}
+
+.container {
+    max-width: 760px;
+    margin: 30px auto;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 22px;
+}
+
+h1 {
+    margin: 0;
+    font-size: 1.9rem;
+}
+
+.subtext {
+    margin-top: 8px;
+    color: var(--muted);
+}
+
+.profile-section {
+    display: flex;
+    gap: 10px;
+    margin: 18px 0;
+}
+
+.profile-btn {
+    border: 1px solid var(--border);
+    background: #fff;
+    color: var(--text);
+    padding: 10px 16px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.profile-btn.active {
+    background: var(--primary);
+    color: #fff;
+    border-color: var(--primary);
+}
+
+.form-section {
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 16px;
+}
+
+.field {
+    margin-bottom: 12px;
+}
+
+label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 6px;
+}
+
+input,
+select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    font-size: 0.98rem;
+}
+
+.save-btn {
+    border: none;
+    background: var(--primary);
+    color: #fff;
+    padding: 10px 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.save-btn:hover {
+    background: var(--primary-strong);
+}
+
+.message {
+    min-height: 20px;
+    margin: 10px 0 0;
+    color: var(--primary-strong);
+}
+
+.saved-section {
+    margin-top: 22px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+.saved-group {
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 12px;
+    background: #fbfdff;
+}
+
+.saved-group h2 {
+    margin-top: 0;
+    font-size: 1.1rem;
+}
+
+.entries {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.entry {
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 14px 12px;
+    background: #fff;
+}
+
+.entry div {
+    line-height: 1.45;
+    font-size: 1rem;
+}
+
+.empty {
+    color: var(--muted);
+    font-size: 0.95rem;
+}
+
+@media (max-width: 720px) {
+    .container {
+        margin: 12px;
+        padding: 16px;
+    }
+
+    .saved-section {
+        grid-template-columns: 1fr;
+    }
+}

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profile Payment Entry</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <main class="container">
+        <h1>How are you?</h1>
+        <p class="subtext">Choose a profile, then add entry details.</p>
+
+        <section class="profile-section" aria-label="Profile selection">
+            <button id="mehulBtn" class="profile-btn active" type="button">Mehul</button>
+            <button id="akhileshBtn" class="profile-btn" type="button">Akhilesh</button>
+        </section>
+
+        <section class="form-section" aria-label="Entry form">
+            <form id="entryForm">
+                <div class="field">
+                    <label for="name">Name</label>
+                    <input id="name" name="name" type="text" required />
+                </div>
+
+                <div class="field">
+                    <label for="phone">Phone</label>
+                    <input id="phone" name="phone" type="tel" required />
+                </div>
+
+                <div class="field">
+                    <label for="paymentMode">Payment Mode</label>
+                    <select id="paymentMode" name="paymentMode" required>
+                        <option value="cash">Cash</option>
+                        <option value="online">Online</option>
+                    </select>
+                </div>
+
+                <div class="field">
+                    <label for="paid">Paid</label>
+                    <select id="paid" name="paid" required>
+                        <option value="yes">Yes</option>
+                        <option value="no">No</option>
+                    </select>
+                </div>
+
+                <button id="saveBtn" class="save-btn" type="button">Save Entry</button>
+            </form>
+            <p id="message" class="message" aria-live="polite"></p>
+        </section>
+
+        <section class="saved-section" aria-label="Saved entries">
+            <div class="saved-group">
+                <h2>Mehul Entries</h2>
+                <div id="mehulList" class="entries"></div>
+            </div>
+
+            <div class="saved-group">
+                <h2>Akhilesh Entries</h2>
+                <div id="akhileshList" class="entries"></div>
+            </div>
+        </section>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
