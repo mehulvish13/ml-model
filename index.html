@@ -4,13 +4,13 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Profile Payment Entry</title>
+    <title>Cashier</title>
     <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
     <main class="container">
-        <h1>How are you?</h1>
+        <h1>Cashier</h1>
         <p class="subtext">Choose a profile, then add entry details.</p>
 
         <section class="profile-section" aria-label="Profile selection">
@@ -27,7 +27,8 @@
 
                 <div class="field">
                     <label for="phone">Phone</label>
-                    <input id="phone" name="phone" type="tel" required />
+                    <input id="phone" name="phone" type="tel" inputmode="numeric" minlength="10" maxlength="10"
+                        pattern="[0-9]{10}" required />
                 </div>
 
                 <div class="field">

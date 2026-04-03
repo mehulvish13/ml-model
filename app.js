@@ -87,6 +87,11 @@ async function saveEntry() {
         return;
     }
 
+    if (!/^[0-9]{10}$/.test(phone)) {
+        messageEl.textContent = "Phone number must be exactly 10 digits.";
+        return;
+    }
+
     const entry = {
         name,
         phone,

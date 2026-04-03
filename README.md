@@ -1,4 +1,4 @@
-# Profile Payment Entry Website
+# Cashier
 
 This is a small Node.js app that stores entries in [entries.json](entries.json).
 
@@ -11,7 +11,7 @@ This is a small Node.js app that stores entries in [entries.json](entries.json).
 
 ## Behavior
 - Select profile: Mehul or Akhilesh.
-- Fill Name, Phone, Payment Mode, and Paid.
+- Fill Name, a 10-digit Phone number, Payment Mode, and Paid.
 - Data saves only when you click **Save Entry**.
 - Saved records are written to `entries.json` in this folder.
 
